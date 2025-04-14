@@ -17,8 +17,11 @@ export default class Game {
 
     this.gameObjects = []
     this.enemies = [];
-
-    for (let index = 0; index < 10000; index++) {
+    this.background = new Image();
+    this.background.src = "./assets/Isbana_MG.png";
+    this.trees = new Image();
+    this.trees.src = "./assets/VintrigskogMG.png"
+    for (let index = 0; index < 5; index++) {
       let enemy = new Enemy(this, Math.random() * this.width, Math.random() * this.height, 20, 20, "#f00", 100);
       this.enemies.push(enemy)
 
@@ -37,6 +40,21 @@ export default class Game {
   }
 
   draw(ctx) {
+
+    ctx.drawImage(
+      this.background,
+      0,
+      0,
+      this.width,
+      this.height,
+    )
+    ctx.drawImage(
+      this.trees,
+      0,
+      0,
+      this.width,
+      this.height,
+    )
     this.gameObjects.forEach(gameObject => {
       gameObject.draw(ctx)
     })

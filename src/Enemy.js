@@ -7,7 +7,7 @@ export default class Enemy extends GameObject {
     this.x = x;
     this.y = y;
     this.image = new Image()
-    this.image.src = "./src/assets/isbjörn.png"
+    this.image.src = "./assets/isbjörn.png"
 
     this.speedX = 0
     this.speedY = 0

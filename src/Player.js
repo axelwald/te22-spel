@@ -5,9 +5,9 @@ export default class Player extends GameObject {
     super(game, 0, 0, 128, 128, "#fff", 5)
 
     this.image = new Image()
-    this.image.src = "./src/assets/Grabbmedspade1.png"
+    this.image.src = "./assets/Grabbmedspade1.png"
     this.attack = new Image() 
-    this.attack.src = "./src/assets/Grabbmedspade2.png"
+    this.attack.src = "./assets/Grabbmedspade2.png"
     this.currentSprite = this.image
     
 
